@@ -15,14 +15,13 @@ import {
   FileText,
 } from "lucide-react"
 import type { Block } from "@/lib/store"
-import { useDocument } from "@/lib/document-context"
 
 interface PreviewPageProps {
   onBack: () => void
 }
 
 export function PreviewPage({ onBack }: PreviewPageProps) {
-  const { chapters } = useDocument(createSampleDocument()) // Use the imported function
+  const { chapters } = useDocument()
 
   return (
     <div className="flex h-screen flex-1 flex-col overflow-hidden">
